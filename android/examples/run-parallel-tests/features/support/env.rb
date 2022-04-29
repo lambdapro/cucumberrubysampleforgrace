@@ -1,19 +1,16 @@
-require 'yaml'
 require 'rspec'
 require 'selenium-cucumber'
 require 'appium_lib'
 
-TASK_ID = (ENV['TASK_ID'] || 0).to_i
-CONFIG_NAME = ENV['CONFIG_NAME'] || 'parallel'
-
-CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__), "../../config/#{CONFIG_NAME}.config.yml")))
 
 username= ENV["LT_USERNAME"] || "{username}"
 accessToken= ENV["LT_ACCESS_KEY"] || "{accessToken}"
-caps = CONFIG['common_caps'].merge(CONFIG['browser_caps'][TASK_ID])
+hub="mobile-hub.lambdatest.com/wd/hub"
+location_map = {"lat" => 28.7041, "long" => 277.1025}
+caps={"deviceName"=>"Pixel 4","project"=>"First Cucumber Android Project", "isRealMobile"=>true, "app"=>"lt://APP10012371651265009437245", "build"=>"Grace","platformName"=>"Android", "name"=>"parallel_test_2","location"=>location_map}
 
 puts (caps)
-hub= CONFIG['server']
+
 
 desired_caps = {
   caps: caps,
