@@ -2,13 +2,13 @@ server: "mobile-hub.lambdatest.com/wd/hub"
 
 common_caps:
   "project": "First Cucumber Android Project"
-  "build": "grace"
   "isRealMobile": true
   "app" : "lt://APP10012371651265009437245"
+  "build": "Grace"
 
 browser_caps:
   -
-    "deviceName": "Pixel 3a"
+    "deviceName": "Pixel 4"
     "platformName": "Android"
     "name": "parallel_test_1"
   -

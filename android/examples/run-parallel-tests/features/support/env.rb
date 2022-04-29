@@ -1,7 +1,6 @@
 require 'yaml'
 require 'rspec'
 require 'selenium-cucumber'
-require 'browserstack/local'
 require 'appium_lib'
 
 TASK_ID = (ENV['TASK_ID'] || 0).to_i
@@ -12,6 +11,7 @@ CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__), "../../config/#{C
 username= ENV["LT_USERNAME"] || "{username}"
 accessToken= ENV["LT_ACCESS_KEY"] || "{accessToken}"
 caps = CONFIG['common_caps'].merge(CONFIG['browser_caps'][TASK_ID])
+
 puts (caps)
 hub= CONFIG['server']
 
