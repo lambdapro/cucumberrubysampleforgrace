@@ -1,0 +1,17 @@
+server: "mobile-hub.lambdatest.com/wd/hub"
+
+common_caps:
+  "project": "First Cucumber Android Project"
+  "build": "grace"
+  "isRealMobile": true
+  "app" : "lt://APP10012371651265009437245"
+
+browser_caps:
+  -
+    "deviceName": "Pixel 3a"
+    "platformName": "Android"
+    "name": "parallel_test_1"
+  -
+    "deviceName": "Pixel 4a"
+    "platformName": "Android"
+    "name": "parallel_test_2"
