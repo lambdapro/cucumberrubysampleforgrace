@@ -1,4 +1,4 @@
-cucumber-ruby-app-browserstack
+cucumber-ruby-app-lambdatest
 =====================
 
 Code sample to get started with Appium tests for your Native App using the Cucumber framework.
