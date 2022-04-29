@@ -4,5 +4,6 @@
 
 tasks:
   - init: bundle install
+    command: bundle exec rake parallel
 
 
